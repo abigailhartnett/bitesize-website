@@ -1,10 +1,95 @@
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --pepper: #292929;
+  --salt: #FAFAFA;
+  --pomegranate: #990F54;
+  --rose: #F5BAD8;
+  --grape: #552EA3;
+  --lavender: #CEBAF5;
+  --broccoli: #0A523A;
+  --mint: #ABE0CE;
+  --mustard: #F5B431;
+  --egg: #F6E8CA;
+  --eggwash: #FFFCF5;
+  --carrot: #E85E2C;
+  --peach: #FFC3AD;
+  --tomato: #C92C2C;
+  --raspberry: #F5A3A3;
+
+}
+
+.container {
+  max-width: 1500px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 1rem;
+  background-color: var(--eggwash);
+}
+
+/* Font applications */
+
+h1 {
+  font-family: "Kalnia", serif;
+  font-size: 4rem;
+  font-style: italic;
+  font-weight: 700;
+  word-spacing: -10px;
+}
+
+.heading-2 {
+
+}
+
+.heading-3 {
+
+}
+
+.numbers {
+  font-family: 'Fira Code', monospace;
+}
+
+.links {
+  font-family: 'Barlow', sans-serif;
+  font-weight: 300;
+}
+
+.bold {
+  font-weight: 600;
+}
+
+.pairing-list {
+  padding: 0;
+  list-style-type: none;
+}
+
+/* Components */
+.nav {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  text-decoration: none;
+  
+}
+
+.nav-link {
+  color: var(--pomegranate)
+}
+
+.recipe-page-hero {
+  
+}
+
+.recipe-index-card {
+  border: 1px solid black;
+}
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  color: var(--pepper);
+  font-family: "Inter", sans-serif;
 }
 
 code {
