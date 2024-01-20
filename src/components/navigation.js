@@ -6,7 +6,7 @@ function NavBar() {
         <div className="nav">
             <NavLink 
                 to="/">
-                <Logo width="113" alt="Logo" />
+                <Logo className="logo" alt="Logo" />
             </NavLink>
             <NavLink 
                 to="/recipes"
