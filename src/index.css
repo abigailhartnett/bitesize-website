@@ -18,14 +18,12 @@
   --peach: #FFC3AD;
   --tomato: #C92C2C;
   --raspberry: #F5A3A3;
-
 }
 
 .container {
   max-width: 1500px;
   width: 100%;
   margin: 0 auto;
-  padding: 0 1rem;
   background-color: var(--eggwash);
 }
 
@@ -56,15 +54,17 @@ h1 {
 
 /* Components */
 .nav {
-  position: sticky;
+  position: fixed;
   top: 0;
   z-index: 3;
   display: flex;
   gap: 2rem;
   align-items: center;
   text-decoration: none;
-  padding: 2rem 0;
+  padding: 0 1rem;
+  height: 6rem;
   background-color: var(--eggwash);
+  width: 100%;
 }
 
 .logo {
@@ -92,29 +92,32 @@ code {
 
 /* Recipe page */
 
-.recipe {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  width: 100vw;
-  gap: 1rem;
+.body {
+  padding: 0 1rem;
+  position: relative;
 }
 
 .recipe-page-hero {
-  /* display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 4rem; */
-  /* max-width: 50%; */
+  position: sticky;
+  top: 6rem;
+  display: grid;
+  grid-template-columns: 50% 1fr;
+  gap: 1rem;
+  max-width: 100%;
   background-color: var(--eggwash);
-  padding-top: 4rem;
+  background-color: transparent;
+}
+
+.recipe-intro {
+  grid-column-start: 1;
+  grid-column: 1 / 2;
+  margin-left: 1rem;
+  max-width: 800px;
 }
 
 .recipe-hero-image {
-  position: sticky;
-  top: 0;
-  right: 0;
-  z-index: 4;
-  max-width: 100%;
-  padding-left: 2rem;
+  z-index: 2;
+  width: 100%;
 }
 
 .pairing-list {
@@ -135,14 +138,21 @@ code {
   padding-bottom: 1rem;
 }
 
+/* .cards-container {
+  display: flex;
+  flex-direction: column;
+} */
+
 .recipe-step-card {
   position: sticky;
-  top: 5.9rem;
+  /* top: calc(var(--h1-height) + 6rem); */
   z-index: 2;
   background-color: var(--eggwash);
   border: 2px solid var(--pepper);
-  margin-top: 5rem;
-  font-size: .8rem;
+  margin-bottom: 1rem;
+  width: calc(50% - 1rem);
+  font-size: 1rem;
+  margin-left: 1rem;
 }
 
 .recipe-step-heading {
@@ -156,13 +166,14 @@ code {
 }
 
 .recipe-step {
-  padding: 1rem;
+  padding: .5rem;
 }
 
 .recipe-sub-step {
   display: grid;
   grid-template-columns: 50% 1fr; 
   gap: 4rem;
+  padding: 1.5rem;
 }
 
 .no-ingredients {
@@ -178,6 +189,7 @@ code {
   display: grid;
   grid-template-columns: 1fr 30%; 
   gap: 1rem;
+  align-items: center;
 }
 
 .recipe-sub-step li p {
